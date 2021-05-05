@@ -9,13 +9,13 @@ Crie um repositório no github com todo o fonte do programa e das imagens gerada
 
 Crie um arquivo README.md especificando quais comandos precisamos executar para que a aplicação funcione recebendo as solicitações na porta 8080 de nosso computador. Lembrando que NÃO utilizaremos Docker-compose nesse desafio.
 
-## PASSO 2 - Criando a rede
+## PASSO 1 - Criando a rede
 Rode no seu terminal o seguinte comando:
 ```
 docker network create -d bridge pfanet
 ```
 
-## PASSO 1 - Rodando os containers:
+## PASSO 2 - Rodando os containers:
 Container do MySQL
 ```
 docker run --network pfanet -d -p 3306:3306 --name db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=pfa -e MYSQL_USER=pfa -e MYSQL_PASSWORD=pfa brunotelo/bd
